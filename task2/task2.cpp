@@ -1,11 +1,23 @@
 // task2.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
+#include "Bill.h"
+#include "buy.h"
+#include "Product.h"
+#pragma once
+#include <string>
 #include <iostream>
-
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+    Product a("Apple", 20.5, 2.5);
+   /* a.showProduct();*/
+
+    Buy b(a, 5);
+    b.showBuy();
+
+    Bill d(b);
+    d.PrintBill();
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
